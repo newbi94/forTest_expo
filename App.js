@@ -1,6 +1,7 @@
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
+import TabNavigation from './navigations/Tab.js';
 import  Setting  from './Setting.js';
 import  Home  from './Home.js';
 import  Menu  from './Menu.js'
@@ -8,17 +9,10 @@ import  Menu  from './Menu.js'
 const Stack = createNativeStackNavigator();
 
 export default function App() {
-  
-  
-  
-
-
-
 
   return (
-  
     <NavigationContainer>
-      <Stack.Navigator 
+      {/* <Stack.Navigator 
       initialRouteName="Home"
       screenOptions={{//모든 페이지에 일괄적용
         title: 'Let Me In', //title
@@ -31,7 +25,10 @@ export default function App() {
         <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="Menu" component={Menu} />
         <Stack.Screen name="Setting" component={Setting} />
-      </Stack.Navigator>
+      </Stack.Navigator> */}
+      
+      <TabNavigation />
+      
     </NavigationContainer>
     
   );
