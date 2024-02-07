@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components/native';
+import { TouchableOpacity, Text } from 'react-native';
 
 const Container = styled.View`
     flex: 1;
@@ -11,11 +12,13 @@ const StyledText = styled.Text`
     font-size: 30px;
 `;
 
-export const Mail = () => {
+export const Mail = ({navigation:{navigate}}) => {
     return (
-        <Container>
-            <StyledText>Mail</StyledText>
-        </Container>
+        <TouchableOpacity 
+    onPress={() => navigate("Stacks", {screen:"StackTwo"})}
+    style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+        <Text>go</Text>
+        </TouchableOpacity>
     )
 };
 

@@ -1,10 +1,10 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { Mail, Meet, Settings } from '../srceens/TabScreen.js';
+import { Mail, Meet, Settings } from '../screens/TabScreen.js';
 
 const Tab = createBottomTabNavigator();
 
-const TabNavigation = () => {
+const Tabs = () => {
     return (
         <Tab.Navigator>
             <Tab.Screen name='Mail' component={Mail} />
@@ -14,4 +14,4 @@ const TabNavigation = () => {
     );
 };
 
-export default TabNavigation;
+export default Tabs;
